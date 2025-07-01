@@ -1,0 +1,129 @@
+ :root {
+   --primary: #4a90e2;
+   --accent: #f5a623;
+   --bg: #f4f6f8;
+   --seat-free: #e0e0e0;
+   --seat-selected: #4a90e2;
+   --seat-booked: #ff4d4d;
+ }
+
+ body {
+   margin: 0;
+   font-family: 'Segoe UI', sans-serif;
+   background-color: var(--bg);
+   color: #333;
+ }
+
+ .container {
+   max-width: 800px;
+   margin: 2rem auto;
+   padding: 2rem;
+   background: white;
+   border-radius: 12px;
+   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+ }
+
+ h1 {
+   text-align: center;
+   color: var(--primary);
+   margin-bottom: 1.5rem;
+ }
+
+ .date-picker {
+   text-align: center;
+   margin-bottom: 1.5rem;
+ }
+
+ select {
+   padding: 0.5rem 1rem;
+   font-size: 1rem;
+   border-radius: 6px;
+   border: 1px solid #ccc;
+ }
+
+ .sessions {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 0.5rem;
+   justify-content: center;
+   margin-bottom: 1.5rem;
+ }
+
+ .session-btn {
+   padding: 0.5rem 1rem;
+   border: none;
+   background: var(--primary);
+   color: white;
+   border-radius: 6px;
+   cursor: pointer;
+   transition: background 0.3s;
+ }
+
+ .session-btn:hover {
+   background: #357ac9;
+ }
+
+ .session-btn.active {
+   background: var(--accent);
+ }
+
+ .seats {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   gap: 0.5rem;
+   justify-content: center;
+   max-width: 400px;
+   margin: 0 auto 1.5rem;
+ }
+
+ .seat {
+   height: 40px;
+   border-radius: 6px;
+   cursor: pointer;
+   background: var(--seat-free);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: bold;
+   transition: background 0.3s, transform 0.2s;
+ }
+
+ .seat:hover {
+   transform: scale(1.1);
+ }
+
+ .seat.selected {
+   background: var(--seat-selected);
+   color: white;
+ }
+
+ .seat.booked {
+   background: var(--seat-booked);
+   color: white;
+   cursor: not-allowed;
+ }
+
+ .book-btn {
+   display: block;
+   margin: 1rem auto 0;
+   padding: 0.75rem 2rem;
+   background: var(--accent);
+   color: white;
+   font-weight: bold;
+   border: none;
+   border-radius: 6px;
+   font-size: 1rem;
+   cursor: pointer;
+   transition: background 0.3s;
+ }
+
+ .book-btn:hover {
+   background: #d78b1e;
+ }
+
+ .footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    color: #666;
+ }
